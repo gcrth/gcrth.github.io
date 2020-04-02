@@ -13,7 +13,7 @@ tags:
 
 ## 问题  
 
-新安装的系统在可以运行实验前都需要配置环境，本文将以ubuntu和manjaro在中国境内的配置方法为例进行配置。
+新安装的系统在可以运行实验前都需要配置环境，本文将以ubuntu和manjaro在中国境内的配置方法为例进行配置。本人使用的是pytorch框架，所以这里除了共同部分还提供了pytorch的配置，tensorflow日后有时间会补上。
 
 ---
 
@@ -97,6 +97,18 @@ conda install pytorch torchvision cudatoolkit=10.1 -c pytorch
 假如是安装推荐方法配置的镜像，`-c`参数不需要去掉，但是假如直接将路径配到`default_channels`中，就需要去掉。
 
 确认安装前可以确认一下版本，假如是上面的命令，版本中应该有cu_101字样。
+
+##### cuda
+
+通过上面的方法可以直接安装cuda，这里的cuda是基于驱动的，安装新版的cuda需要新的驱动。
+
+假如需要编写cuda的程序，可以通过下面的命令安装额外的包。具体可以参考<https://anaconda.org/conda-forge/cudatoolkit-dev>。
+
+```bash
+conda install -c conda-forge cudatoolkit-dev
+```
+
+#### 其他
 
 然后根据不同的项目安装其他的软件，很多提供写好的requirement，可以使用下面的命令安装。
 

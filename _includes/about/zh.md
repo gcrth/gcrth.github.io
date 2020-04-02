@@ -2,4 +2,4 @@
 
 假如有联系我的需要，可以通过邮件。
 
-这个博客的模板来源于开源项目<https://github.com/Huxpro/huxpro.github.io>，可能有一些原来项目的信息没有修改，但是并不是重点。
+这个博客的模板来源于[开源项目](https://github.com/Huxpro/huxpro.github.io)，可能有一些原来项目的信息没有修改，但是并不是重点。
