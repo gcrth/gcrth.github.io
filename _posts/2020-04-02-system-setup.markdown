@@ -64,35 +64,35 @@ python oh-my-tuna.py
 
 这里的使用脚本配置源大部分和ubuntu类似，这里讲一下手动配置的方法。
 
-
 ```bash
 sudo pacman-mirrors -i -c China -m rank
 sudo pacman -Syyu
 ```
 
-配置ArchlinuxCN 
-```bash
-sudo vim /etc/pacman.conf
-```
-添加
-```
+通过编辑`/etc/pacman.conf`配置ArchlinuxCN，在文件尾添加以下内容
+
+```txt
 [archlinuxcn]
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 ```
+
 然后执行更新。
+
 ```bash
 sudo pacman -Syy && sudo pacman -S archlinuxcn-keyring
 ```
 
 ### 输入法
 
-```
+```bash
 sudo pacman -S fcitx-sogoupinyin
 sudo pacman -S fcitx-im # 全部安装
 sudo pacman -S fcitx-configtool # 图形化配置工具
 ```
+
 编辑`~/.xprofile`，添加
-```
+
+```txt
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS="@im=fcitx"
@@ -163,5 +163,47 @@ pip install -r requirement.txt
 ```
 
 #### zsh
+
+安装zsh很简单，但是安装好假如自行配置会比较麻烦，可以使用oh-my-zsh来简化这一流程。
+
+安装的命令。
+
+```bash
+sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+大部分情况使用默认即可，更详细的配置可以查阅<https://github.com/ohmyzsh/ohmyzsh>。
+
+#### ssh
+
+#### 安装配置
+
+ubuntu需要安装，而manjaro不需要。
+
+ubuntu安装命令。
+
+```bash
+sudo apt-get install openssh-server
+```
+
+通过下面的命令开启sshd
+
+```bash
+systemctl enable sshd.service  #开机启动
+systemctl start sshd.service   #立即启动
+systemctl restart sshd.service #立即重启
+```
+
+##### 密钥登陆
+
+生成密钥，使用默认参数即可。
+```bash
+ssh-keygen
+```
+
+复制公钥到服务器上。
+```bash
+ssh-copy-id -i .ssh/id_rsa.pub  USR_NAME@SERVER_IP
+```
 
 >未完待续
