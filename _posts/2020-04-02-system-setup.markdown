@@ -197,13 +197,26 @@ systemctl restart sshd.service #立即重启
 ##### 密钥登陆
 
 生成密钥，使用默认参数即可。
+
 ```bash
 ssh-keygen
 ```
 
 复制公钥到服务器上。
+
 ```bash
 ssh-copy-id -i .ssh/id_rsa.pub  USR_NAME@SERVER_IP
+```
+
+#### git
+
+git安装很简单，大部分系统预装了git。
+
+但是在可以正常使用前需要配置用户名和邮箱。
+
+```bash
+git config --global user.name USR_NAME
+git config --global user.email EMAIL
 ```
 
 >未完待续
