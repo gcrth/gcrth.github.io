@@ -19,19 +19,9 @@ tags:
 
 ## 解决方法
 
-### ubuntu
+>对于新装的电脑建议阅读“电脑系统不稳定一文”进行测试，确认硬件的可靠性。
 
-本文中采用的版本为18.04.4，其他的版本大同小异。
-
-#### 显示问题
-
-首先ubuntu对于nVidia显卡的支持需要依靠闭源的驱动，而开源的驱动稳定性差，很有可能没有正确显示。我们可以通过以下方式进行暂时的修复。
-
-首先我们要通过U盘启动，在选择界面不要直接选择install选项，而是按e进入启动项的编辑界面。找到`quite splash`字样，假如有`---`，将其删除然后加上`nomodeset`。改完后按F10开机。
-
-在正确安装系统后，我们重启进入正式的系统，但是不要直接进系统，可能无法正常显示。我们需要在开机界面按shift进入选择界面，然后按照上面的流程编辑启动项。
-
-在开机后安装闭源驱动应该可解决显示问题。假如无法解决可以编辑`/etc/default/grub`，加上`nomodeset`解决显示问题，但是想要正确使用cuda必须安装闭源驱动。
+### 通用
 
 #### 换源
 
@@ -45,60 +35,6 @@ python oh-my-tuna.py
 如此以来就可以一键配置多个镜像。
 
 如果希望手工配置可以参考<https://mirrors.tuna.tsinghua.edu.cn/help/AOSP/>，页面中给出了镜像官方的配置建议。
-
-#### 安装驱动
-
-在换好源后，我们可以开始配置驱动，主要是nVidia显卡驱动。ubuntu桌面版本给出了图像化的选择界面，位于软件更新器的设置中，选项卡名为附加驱动。这里推荐使用带有tested字样的版本。
-
-如果需要通过命令行安装可以参考<https://linuxconfig.org/how-to-install-the-nvidia-drivers-on-ubuntu-18-04-bionic-beaver-linux>，但是最推荐通过上面的方式安装不容易出错。
-
-### manjaro
-
-这里使用的是kde版本，版本号为19.0.2。其他版本应该差不多。
-
-#### 安装
-
-安装没有太多的问题，只需要在安装时的驱动选项改为nofree即可。不出意外的话，nVidia的驱动也会自动安装上。
-
-#### 配置源
-
-这里的使用脚本配置源大部分和ubuntu类似，这里讲一下手动配置的方法。
-
-```bash
-sudo pacman-mirrors -i -c China -m rank
-sudo pacman -Syyu
-```
-
-通过编辑`/etc/pacman.conf`配置ArchlinuxCN，在文件尾添加以下内容
-
-```txt
-[archlinuxcn]
-Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
-```
-
-然后执行更新。
-
-```bash
-sudo pacman -Syy && sudo pacman -S archlinuxcn-keyring
-```
-
-### 输入法
-
-```bash
-sudo pacman -S fcitx-sogoupinyin
-sudo pacman -S fcitx-im # 全部安装
-sudo pacman -S fcitx-configtool # 图形化配置工具
-```
-
-编辑`~/.xprofile`，添加
-
-```txt
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-export XMODIFIERS="@im=fcitx"
-```
-
-### 通用
 
 #### python环境配置
 
@@ -124,7 +60,7 @@ sh Miniconda3-latest-Linux-x86_64.sh
 
 ```bash
 conda update -n base conda                   //update最新版本的conda
-conda create -n ENV_NAME python=VERSION_NO   //创建python3.5的xxxx虚拟环境
+conda create -n ENV_NAME python=VERSION_NO   //创建python的xxxx虚拟环境
 conda activate ENV_NAME                      //开启xxxx环境
 conda deactivate                             //关闭环境
 conda env list                               //显示所有的虚拟环境
@@ -218,5 +154,79 @@ git安装很简单，大部分系统预装了git。
 git config --global user.name USR_NAME
 git config --global user.email EMAIL
 ```
+
+### ubuntu
+
+本文中采用的版本为18.04.4，其他的版本大同小异。
+
+#### 显示问题
+
+首先ubuntu对于nVidia显卡的支持需要依靠闭源的驱动，而开源的驱动稳定性差，很有可能没有正确显示。我们可以通过以下方式进行暂时的修复。
+
+首先我们要通过U盘启动，在选择界面不要直接选择install选项，而是按e进入启动项的编辑界面。找到`quite splash`字样，假如有`---`，将其删除然后加上`nomodeset`。改完后按F10开机。
+
+在正确安装系统后，我们重启进入正式的系统，但是不要直接进系统，可能无法正常显示。我们需要在开机界面按shift进入选择界面，然后按照上面的流程编辑启动项。
+
+在开机后安装闭源驱动应该可解决显示问题。假如无法解决可以编辑`/etc/default/grub`，加上`nomodeset`解决显示问题，但是想要正确使用cuda必须安装闭源驱动。
+
+#### 安装驱动
+
+在换好源后，我们可以开始配置驱动，主要是nVidia显卡驱动。ubuntu桌面版本给出了图像化的选择界面，位于软件更新器的设置中，选项卡名为附加驱动。这里推荐使用带有tested字样的版本。
+
+如果需要通过命令行可以使用下面的命令，与上面的图像界面可以达到类似的效果。
+
+```bash
+sudo ubuntu-drivers autoinstall
+```
+
+如果需要通过命令行安装特定的驱动可以参考<https://linuxconfig.org/how-to-install-the-nvidia-drivers-on-ubuntu-18-04-bionic-beaver-linux>以及<https://blog.csdn.net/wf19930209/article/details/81877822>，但是最推荐通过上面的方式安装不容易出错。
+
+### manjaro
+
+这里使用的是kde版本，版本号为19.0.2。其他版本应该差不多。
+
+#### 安装
+
+安装没有太多的问题，只需要在安装时的驱动选项改为nofree即可。不出意外的话，nVidia的驱动也会自动安装上。
+
+#### 配置源
+
+这里的使用脚本配置源大部分和ubuntu类似，这里讲一下手动配置的方法。
+
+```bash
+sudo pacman-mirrors -i -c China -m rank
+sudo pacman -Syyu
+```
+
+通过编辑`/etc/pacman.conf`配置ArchlinuxCN，在文件尾添加以下内容
+
+```txt
+[archlinuxcn]
+Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
+```
+
+然后执行更新。
+
+```bash
+sudo pacman -Syy && sudo pacman -S archlinuxcn-keyring
+```
+
+### 输入法
+
+```bash
+sudo pacman -S fcitx-sogoupinyin
+sudo pacman -S fcitx-im # 全部安装
+sudo pacman -S fcitx-configtool # 图形化配置工具
+```
+
+编辑`~/.xprofile`，添加
+
+```txt
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS="@im=fcitx"
+```
+
+上面的内容配置好后需要重启生效，然后通过<ctrl>+<blank>即可切换输入法。
 
 >未完待续
