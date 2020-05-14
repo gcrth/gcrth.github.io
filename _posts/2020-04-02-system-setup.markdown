@@ -211,7 +211,7 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 sudo pacman -Syy && sudo pacman -S archlinuxcn-keyring
 ```
 
-### 输入法
+#### 输入法
 
 ```bash
 sudo pacman -S fcitx-sogoupinyin
