@@ -23,6 +23,29 @@ tags:
 
 ### 通用
 
+#### 挂载硬盘
+
+临时挂载硬盘使用下面命令，同时给出卸载命令。
+
+```bash
+mount /dev/DEVICE_NAME /MOUNT_POINT
+umount /dev/DEVICE_NAME
+```
+
+如果每次开机都要自动挂载需要使用以下方式。
+
+查看硬盘的UUID。
+
+```bash
+sudo blkid
+```
+
+将其加入到启动列表`/etc/fstab`中。
+
+```bash
+sudo echo 'UUID=UUID_VALUE MOUNT_POINT FILESYSTEM_TYPE defaults 0 0' > /etc/fstab
+```
+
 #### 换源
 
 由于在中国境内的网络问题，在安装软件前需要配置镜像。这里推荐一个好用的[脚本](https://github.com/tuna/oh-my-tuna)，是清华源推出用来一键配置清华源的。使用的时候可以使用以下命令。
@@ -169,6 +192,8 @@ git config --global user.email EMAIL
 
 在开机后安装闭源驱动应该可解决显示问题。假如无法解决可以编辑`/etc/default/grub`，加上`nomodeset`解决显示问题，但是想要正确使用cuda必须安装闭源驱动。
 
+在PVE虚拟环境中安装时，需要更改显示为标准VGA，否则会出行`Failed to start User Manager for UID 121 See 'systemctl status user@121.serv`错误。
+
 #### 安装驱动
 
 在换好源后，我们可以开始配置驱动，主要是nVidia显卡驱动。ubuntu桌面版本给出了图像化的选择界面，位于软件更新器的设置中，选项卡名为附加驱动。这里推荐使用带有tested字样的版本。
@@ -180,6 +205,23 @@ sudo ubuntu-drivers autoinstall
 ```
 
 如果需要通过命令行安装特定的驱动可以参考<https://linuxconfig.org/how-to-install-the-nvidia-drivers-on-ubuntu-18-04-bionic-beaver-linux>以及<https://blog.csdn.net/wf19930209/article/details/81877822>，但是最推荐通过上面的方式安装不容易出错。
+
+#### samba
+
+首先安装samba。
+
+```bash
+sudo apt-get install samba
+```
+
+随后配置文件`/etc/samba/smb.conf`，具体参照文件中的注释。
+
+最后设置启动项。
+
+```bash
+systemctl start smbd
+systemctl enable smbd
+```
 
 ### manjaro
 
@@ -228,5 +270,15 @@ export XMODIFIERS="@im=fcitx"
 ```
 
 上面的内容配置好后需要重启生效，然后通过<ctrl>+<blank>即可切换输入法。
+
+#### samba
+
+具体参照<https://wiki.manjaro.org/index.php?title=Using_Samba_in_your_File_Manager#KDE>。
+
+## PVE
+
+安装时需要选择兼容引导，使用uefi可能会出错。镜像需要使用DD方式写入。推荐使用Rufus。
+直通硬盘可以参照<https://www.jianshu.com/p/ea8fc63025dc>。
+显卡直通推荐参照<https://blog.51cto.com/12242014/2382885><https://pve.proxmox.com/wiki/Pci_passthrough#GPU_Passthrough>，选择主GPU以及所有功能选项。
 
 >未完待续
