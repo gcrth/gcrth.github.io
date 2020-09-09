@@ -43,7 +43,7 @@ python oh-my-tuna.py
 conda下载可以使用下面的命令。这里需要注意版本。
 
 ```bash
-weget https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-latest-Linux-x86_64.sh
+wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-latest-Linux-x86_64.sh
 ```
 
 然后，执行脚本即可。
