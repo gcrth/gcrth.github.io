@@ -68,7 +68,7 @@ disqus_username: gcrth
 
 # Analytics settings
 # Baidu Analytics 
-# ba_track_id: [your track id]
+ba_track_id: 'af12cf75d737ccda5580787d41e7a927'
 
 # Google Analytics
 # ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
