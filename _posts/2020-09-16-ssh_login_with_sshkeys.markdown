@@ -6,6 +6,8 @@ date:       2020-09-16 02:39:43
 author:     "gcrth"
 header-img: "img/post-bg-2015.jpg"
 catalog: true
+tag:
+    - ssh
 ---
 
 ## 问题
