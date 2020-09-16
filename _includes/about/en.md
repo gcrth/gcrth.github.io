@@ -15,12 +15,6 @@ HAO ZHANG
 * Skype ID: live:gcrth
 * Research Gate: https://www.researchgate.net/profile/Hao_Zhang419
 
-<!-- <div>
-<div style="float:left"></div>
-<div style="float:right"></div>
-</div>
-<br> -->
-
 ### EDUCATION
 
 * University of Cambridge `Cambridge, UK`
@@ -39,7 +33,7 @@ HAO ZHANG
   
   <div class="clear" ></div>
 
-  Overall GPA: 90.3/100  Major GPA: 93.1/100
+  Overall GPA: **90.3/100**  Major GPA: **93.1/100**
 
   Core Courses: Data Structure (96/100), Computational Theory & Algorithms Analysis Design (96/100), Object-Oriented Technology & Method (91/100), Database Principle & Design (94/100), Optimization Method (95/100), Computer Graphics (96/100), Software Engineering (91/100)
 
@@ -52,11 +46,15 @@ GRE: 330 (Verbal: 162, Quantitative: 168)
 
 ### PUBLICATION
 
-* Xin Li, Xiaoqing Lyu, Hao Zhang, Keqi Hu, Zhi Tang, Regularizing Variational Autoencoders for Molecular Graph Generation, 2019 26th International Conference on Neural Information Processing (ICONIP), accepted
-
-* Xin Li, Xiaoqing Lyu, Hao Zhang, Zhi Tang, Chemical Similarity Based on Map Edit Distance, 2019 IEEE International Conference on Bioinformatics and Biomedicine (BIBM), eCF Paper Id: P230, accepted
-
-* Bei Wang, Chenrui Zhang, Hao Zhang, Xiaoqing Lyu, Zhi Tang, Dual Autoencoder Network with Swap Reconstruction for Cold-Start Recommendation, 2020 Conference on Information and Knowledge Management (CIKM), accepted
+* Xin Li, Xiaoqing Lyu, **Hao Zhang**, Keqi Hu, Zhi Tang, **Regularizing Variational Autoencoders for Molecular Graph Generation**, 2019 26th International Conference on Neural Information Processing (ICONIP), accepted
+  
+  [paper](../../paper/CIKM2020.pdf); [Intro](#paper3)
+* Xin Li, Xiaoqing Lyu, **Hao Zhang**, Zhi Tang, **Chemical Similarity Based on Map Edit Distance**, 2019 IEEE International Conference on Bioinformatics and Biomedicine (BIBM), eCF Paper Id: P230, accepted
+  
+  [paper](../../paper/bibm2019.pdf); [Intro](#paper2)
+* Bei Wang, Chenrui Zhang, **Hao Zhang**, Xiaoqing Lyu, Zhi Tang, **Dual Autoencoder Network with Swap Reconstruction for Cold-Start Recommendation**, 2020 Conference on Information and Knowledge Management (CIKM), accepted
+  
+  [paper](../../paper/ICONIP2019.pdf); [Intro](#paper1)
 
 ### RESEARCH EXPERIENCE
 
@@ -70,29 +68,35 @@ Supervisor: Xiaoqing Lyu `Intern`
 
 #### Dual Autoencoder Network with Swap Reconstruction for Cold-Start Recommendation `12/2019~09/2020`
 
-<div class="clear" ></div>
+<div class="clear" id="paper3"></div>
 
 * Focused on solving the cold-start recommendation problem through the cross-domain recommendation.
 * Proposed a Dual Autoencoder Network (DAN) framework, which could improve cold-start recommendations by an end-to-end manner.
 * Adopted a domain swapping strategy for designing reconstruction constraints in DAN with the two branches decoders.
 * Conducted the experiments and the results showed that our DAN outperforms other existing approaches.
 
+![intro_picture](../../img/about/p4.jpg)
+
 #### Chemical Similarity Based on Map Edit Distance `07/2019~09/2019`
 
-<div class="clear" ></div>
+<div class="clear" id="paper2"></div>
 
 * Accomplished the molecular classification and the molecular search with the molecular similarity, which is measured by the map edit distance (MED).
 * Showed the effectiveness of the proposed MED for graph classification tasks in the area of cheminformatics through k-Nearest Neighbors (KNN) classifier.
 * Conducted the comparison between the developed classifier and other two types of methods to investigate the effectiveness of tackling the graph classification tasks in the area of cheminformatics.
+* 
+![intro_picture](../../img/about/p2.jpg)
 
 #### Generate the Molecular with Special Characteristic `12/2018~06/2019`
 
-<div class="clear" ></div>
+<div class="clear" id="paper1"></div>
 
 * Adopted Variational Autoencoders (VAEs) to operate directly on graph-structured data to generate molecular.
 * Designed an interpretable regularizer to encourage the generation of molecule with desired properties.
 * Compared with the method of generation of molecular such as: Graph based, SMILES based, and the method of generative recursive autoencoders for Shape Structures.
 * Tried to find a solution for model collapse and improve the diversity of generated molecules. 
+
+![intro_picture](../../img/about/p1.jpg)
 
 ***
 
@@ -109,6 +113,11 @@ Supervisor：Sanyuan Zhao `Graduation Project`
 * Took not only the number of parameters and operations, but also memory access cost into consideration while designing our light-weight model.
 * Improved the robustness of our model significantly through Adversial training.
 * Completed the comprehensive experiments and proved our model’s state-of-art performance and practical meaning that ahead of the other models. 
+
+![intro_picture](../../img/about/p3.jpg)
+
+[code](https://github.com/gcrth/sr)
+
 
 ### WORKING EXPERIENCE
 
