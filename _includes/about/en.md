@@ -14,7 +14,7 @@ HAO ZHANG
 <div style="float:left"></div>
 <div style="float:right"></div>
 </div>
-</br>
+<br>
 
 ### EDUCATION
 
@@ -22,23 +22,23 @@ HAO ZHANG
   <div style="float:left">University of Cambridge</div>
   <div style="float:right">Cambridge, UK</div>
   </div>
-  </br>
+  <br>
   <div>
   <div style="float:left">M.Phil. Candidate in Computational Biology</div>
   <div style="float:right">10/2020~08/2021</div>
   </div>
-  </br>
+  <br>
 
 * <div>
   <div style="float:left">Beijing Institute of Technology</div>
   <div style="float:right">Beijing, China</div>
   </div>
-  </br>
+  <br>
   <div>
   <div style="float:left">B. Eng. in Computer Science & Technology</div>
   <div style="float:right">09/2016~07/2020</div>
   </div>
-  </br>
+  <br>
   Overall GPA: 90.3/100  Major GPA: 93.1/100
 
   Core Courses: Data Structure (96/100), Computational Theory & Algorithms Analysis Design (96/100), Object-Oriented Technology & Method (91/100), Database Principle & Design (94/100), Optimization Method (95/100), Computer Graphics (96/100), Software Engineering (91/100)
@@ -64,12 +64,12 @@ GRE: 330 (Verbal: 162, Quantitative: 168)
 <div style="float:left">Wangxuan institute of computer technology (WICT), Peking University</div>
 <div style="float:right">Beijing, China</div>
 </div>
-</br>
+<br>
 <div>
 <div style="float:left">Supervisor: Xiaoqing Lyu</div>
 <div style="float:right">Intern</div>
 </div>
-</br>
+<br>
 
 #### Dual Autoencoder Network with Swap Reconstruction for Cold-Start Recommendation
 
@@ -103,12 +103,12 @@ GRE: 330 (Verbal: 162, Quantitative: 168)
 <div style="float:left">Beijing Institute of Technology  </div>
 <div style="float:right">Beijing, China</div>
 </div>
-</br>
+<br>
 <div>
 <div style="float:left">Supervisor：Sanyuan Zhao</div>
 <div style="float:right">Graduation Project</div>
 </div>
-</br>
+<br>
 
 #### Super Resolution Model Based on GAN
 
