@@ -2,10 +2,11 @@
 catalog: true
 --- -->
 
-
 ## About Me
 
 HAO ZHANG
+
+![avatar](../../img/DSC_9904.jpg){:height="50%" width="50%"}
 
 ### Contact Information
 
