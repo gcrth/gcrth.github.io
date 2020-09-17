@@ -201,7 +201,7 @@ Intern of the Decision-Making Control Group `Beijing, China`
 
 ## About this Blog
 
-Hello，this is Gcrth. This blog posts several problems I met before and it may help you if you meet with similiar problem.
+Hello, this is Gcrth. This blog posts several problems I met before and it may help you if you meet with similiar problem.
 
 You can get in touch with me by email if needed.
 
