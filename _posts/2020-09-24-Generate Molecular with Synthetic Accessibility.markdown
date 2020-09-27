@@ -29,13 +29,13 @@ It is important for this model to reduce the action space.
 
 The whole structure is showed in the picture. 
 
-![model structure](../img/in-post/2020-09-24-Generate%20Molecular%20with%20Synthetic%20Accessibility/Screenshot%202020-09-25%20121825.jpg)
+![model structure](/img/in-post/2020-09-24-Generate%20Molecular%20with%20Synthetic%20Accessibility/Screenshot%202020-09-25%20121825.jpg)
 
 The actor (blue area) takes the first reactant, the product from the previous step, as input and outputs the action which will be the prototype of the second reactant. The critic (red area) outputs the Q value according to the action and state. The environment chooses k reactants most related to the prototype to be the candidates and output the reactant with the highest reward.
 
 The main structure of training is showed below. In fact any policy gradient algorithm for continuous action spaces will do the similar thing.
 
-![training steps](../img/in-post/2020-09-24-Generate%20Molecular%20with%20Synthetic%20Accessibility/Screenshot%202020-09-25%20124751.jpg)
+![training steps](/img/in-post/2020-09-24-Generate%20Molecular%20with%20Synthetic%20Accessibility/Screenshot%202020-09-25%20124751.jpg)
 
 To enable the model to train faster, there are several ticks.
 
@@ -61,7 +61,7 @@ The performance of this model is compared through both traditional metrics and p
 
 The performance of this model is compared with other similar models, and the result is as follow.
 
-![result](../img/in-post/2020-09-24-Generate%20Molecular%20with%20Synthetic%20Accessibility/Screenshot%202020-09-25%20170221.jpg)
+![result](/img/in-post/2020-09-24-Generate%20Molecular%20with%20Synthetic%20Accessibility/Screenshot%202020-09-25%20170221.jpg)
 
 ## Future Work
 

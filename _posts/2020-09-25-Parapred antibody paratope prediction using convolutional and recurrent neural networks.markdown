@@ -33,7 +33,7 @@ The problem can be formalized as binary classification problem of each element i
 
 The main structure of the model is as follow.
 
-![model structure](../img/in-post/2020-09-25-Parapred%20antibody%20paratope%20prediction%20using%20convolutional%20and%20recurrent%20neural%20networks/Screenshot%202020-09-26%20192211.jpg)
+![model structure](/img/in-post/2020-09-25-Parapred%20antibody%20paratope%20prediction%20using%20convolutional%20and%20recurrent%20neural%20networks/Screenshot%202020-09-26%20192211.jpg)
 
 There are several key points.
 
@@ -43,13 +43,13 @@ There are several key points.
 * The loss is binary cross-entropy loss.
 * Adam optimizer.
 
-![Bidirectional RNN](../img/in-post/2020-09-25-Parapred%20antibody%20paratope%20prediction%20using%20convolutional%20and%20recurrent%20neural%20networks/Screenshot%202020-09-26%20192232.jpg)
+![Bidirectional RNN](/img/in-post/2020-09-25-Parapred%20antibody%20paratope%20prediction%20using%20convolutional%20and%20recurrent%20neural%20networks/Screenshot%202020-09-26%20192232.jpg)
 
 ## Experiment
 
 The experiment is done with 10-fold cross-validation. The result is showed as follow.
 
-![result](../img/in-post/2020-09-25-Parapred%20antibody%20paratope%20prediction%20using%20convolutional%20and%20recurrent%20neural%20networks/Screenshot%202020-09-26%20192250.jpg)
+![result](/img/in-post/2020-09-25-Parapred%20antibody%20paratope%20prediction%20using%20convolutional%20and%20recurrent%20neural%20networks/Screenshot%202020-09-26%20192250.jpg)
 
 ## Future Work
 

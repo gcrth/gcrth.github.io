@@ -25,17 +25,17 @@ There are two key points about this model.
 
 The main structure of this model is called Directed MPNN. The main difference between it and MPNN is that it uses messages associated with bonds instead of atoms to prevent totters. Most vital calculation in the model is showed below.
 
-![calculation1](../img/in-post/2020-09-27-Analyzing%20Learned%20Molecular%20Representations%20for%20Property%20Prediction/Screenshot%202020-09-27%20180356.jpg)
+![calculation1](/img/in-post/2020-09-27-Analyzing%20Learned%20Molecular%20Representations%20for%20Property%20Prediction/Screenshot%202020-09-27%20180356.jpg)
 
-![calculation2](../img/in-post/2020-09-27-Analyzing%20Learned%20Molecular%20Representations%20for%20Property%20Prediction/Screenshot%202020-09-27%20180432.jpg)
+![calculation2](/img/in-post/2020-09-27-Analyzing%20Learned%20Molecular%20Representations%20for%20Property%20Prediction/Screenshot%202020-09-27%20180432.jpg)
 
 The initial features can be calcualted with the following tables.
 
-![feature tables](../img/in-post/2020-09-27-Analyzing%20Learned%20Molecular%20Representations%20for%20Property%20Prediction/Screenshot%202020-09-27%20180447.jpg)
+![feature tables](/img/in-post/2020-09-27-Analyzing%20Learned%20Molecular%20Representations%20for%20Property%20Prediction/Screenshot%202020-09-27%20180447.jpg)
 
 To enhance the performance, the model can incorporates 200 global molecular features that can be computed rapidly with RDKit. The incorporation is done as follow.
 
-![incorporation](../img/in-post/2020-09-27-Analyzing%20Learned%20Molecular%20Representations%20for%20Property%20Prediction/Screenshot%202020-09-27%20180504.jpg)
+![incorporation](/img/in-post/2020-09-27-Analyzing%20Learned%20Molecular%20Representations%20for%20Property%20Prediction/Screenshot%202020-09-27%20180504.jpg)
 
 The hyperparameter is optimized with Hyperopt. By training multiple model seperately and use the average of the output as actual ouput, we could improve the performance.
 
@@ -59,13 +59,13 @@ The description in the paper does not seem to be matched.
 
 The first one.
 
-![description1](../img/in-post/2020-09-27-Analyzing%20Learned%20Molecular%20Representations%20for%20Property%20Prediction/Screenshot%202020-09-27%20220141.jpg)
+![description1](/img/in-post/2020-09-27-Analyzing%20Learned%20Molecular%20Representations%20for%20Property%20Prediction/Screenshot%202020-09-27%20220141.jpg)
 
 The second one.
 
-![description2-1](../img/in-post/2020-09-27-Analyzing%20Learned%20Molecular%20Representations%20for%20Property%20Prediction/Screenshot%202020-09-27%20220058.jpg)
+![description2-1](/img/in-post/2020-09-27-Analyzing%20Learned%20Molecular%20Representations%20for%20Property%20Prediction/Screenshot%202020-09-27%20220058.jpg)
 
-![description2-2](../img/in-post/2020-09-27-Analyzing%20Learned%20Molecular%20Representations%20for%20Property%20Prediction/Screenshot%202020-09-27%20220114.jpg)
+![description2-2](/img/in-post/2020-09-27-Analyzing%20Learned%20Molecular%20Representations%20for%20Property%20Prediction/Screenshot%202020-09-27%20220114.jpg)
 
 ## Code
 
