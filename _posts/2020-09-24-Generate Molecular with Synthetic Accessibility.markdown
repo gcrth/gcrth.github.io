@@ -18,10 +18,10 @@ The RL model could give the synthesis routes of the proposed small molecules to 
 
 The base RL algorithm used in this model is TD3. However, there are several difference between each other.
 
-* The actor module includes two learnable networks. 
-* There is no critic network in this model and a k-NN network will be a replacement.
+* The actor module includes two learnable networks.
+* A k-NN network will be used as a part of the environment.
 
-It is important for this model to reduce the action space. 
+It is important for this model to reduce the action space.
 
 * At each step, the model will first select a reaction template and then select a reactant. A reaction template is represented as SMARTS, and these templates limit the reactants having reaction to have particular substructure. 
 * The reactants are also constrained to have the substructure once. 
