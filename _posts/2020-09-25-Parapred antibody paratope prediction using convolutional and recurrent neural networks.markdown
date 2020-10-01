@@ -60,3 +60,7 @@ Add 3-D structure infromation.
 ### other
 
 The model would be more useful if it could output whether residues is the paratope related to the input antigen.
+
+## Code
+
+Implemented with tensorflow1, The code is available via <https://github.com/eliberis/parapred>.
