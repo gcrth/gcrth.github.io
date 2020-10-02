@@ -52,7 +52,7 @@ The performance of this model is compared through both traditional metrics and p
 
 * QED
 * clogP
-* pIC50 predicted by QSAR model towards three targets
+* pIC50 predicted by QSAR model towards three targets __(this seems to be more reasonable than other two)__
   * CCR5
   * HIV integrace (INT)
   * HIV-RT 
@@ -74,6 +74,7 @@ The performance of this model is compared with other similar models, and the res
 
 * The reaction templates represented by SMARTS may limited the final product.
 * The usage of k-NN is kind of weird and the Pi network should learn to produce valid action instead of fixing it with K-NN.
+* The result of QSAR model would have differnce with the truth, and it may have some negetive impact. Actually othe two metrics have similar problem.
 
 ## code
 
