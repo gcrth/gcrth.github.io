@@ -283,3 +283,63 @@ I found that the class in R is different from the class in Java.
 The class in R seems to have no method included in it and just have some data fields inside (I am not sure). Could I difine a class like what I do in Java?
 
 Moreover, the main purpose of using class in R seems to be matching the generic function instead of OOD, isn't it?
+
+## About the graphics
+
+Some function would create a figure (plot, curve, symbols), but other would need to be added to an existed figure (points lines).
+
+Could I use the function that would create a figure to change a existing figure by some way?
+
+What is the most elegant way to create a bank canvas? I use the following function.
+
+```R
+plot(c(0, 1),
+     c(0, 1),
+     type = "n",
+     xlab = "",
+     ylab = "",
+     bty='n',
+     axes = F)
+```
+
+The figure saved in pdf format would have a better quality when zooming, but how can I embed it into another document?
+
+How could I reset all the par settings? I do this by restarting the current session.
+
+## Can I use the code in the hint directly?
+
+## About the unpack
+
+Some function would need to have a parameter list, such as (paste). It could not deal with vector correctly, so we need to unpack the vector.
+
+```R
+paste(c('a','b'))
+```
+
+In python, we could do the following things.
+
+```python
+a=[1,2,3]
+some_function_need_parameter_list(*a)
+```
+
+Could I do similiar things in R?
+
+## How could I index the string?
+
+If I want to get the i element, I could not do `some_sting[n]`. I could only use substr to do so.
+
+## Could I index the element from reverse way
+
+I could do this by `some_list[-i]` in python.
+
+## Why I could not use as.vector to turn a list to a vector?
+
+I need to use unlist to do so.
+
+## Could I have a vector with multiple vector inside?
+
+I did not find a way to do so.
+
+
+
