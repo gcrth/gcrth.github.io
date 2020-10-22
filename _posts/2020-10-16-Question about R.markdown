@@ -25,6 +25,10 @@ get_type <- function(obj) {
 
 I wonder what it is the difference between all these four different way. I could not get much information from the document.
 
+### Answer
+
+The type system in R is not good designed, and the diffference between these is not that clear. Generally the class is a tag given by the user, and mode is how the system treat this data.
+
 ## Class of Vector
 
 The class of vector, ie `class(1:6)`, behaves a little different from the class of other objects including matrix, array, list, data.frame. The class of vector would be the type of the element inside, but the class of other compound objects (container) would be the type of the container. We could found this with the following code.
@@ -123,6 +127,10 @@ storage.mode:  list
 
 I wonder why the vector behaves so differently, and is there a way to identity a vector without using `is.vector()`?
 
+### Answer
+
+It is because it is not well designed. `is.vector()` is the only way to do so.
+
 ## Why a list is a vector
 
 If you test whether a list is a vector with following code, you would find something suprising.
@@ -146,6 +154,10 @@ Result
 ### Question
 
 Why is a list also a vector?
+
+### Answer
+
+Unclear yet.
 
 ### Build a Vector and Get a List
 
@@ -204,6 +216,105 @@ storage.mode:  list
 ### Question
 
 The object `b` I built work entirely as a list not a vector, but I built it with a `vector()` method. I am confusing why this would happened and what structure of `b` is.
+
+### Answer
+
+Function `vector` could be used to create a list in this situation, and other mode options work just normally.
+
+## Understanding of the class in R
+
+I found that the class in R is different from the class in Java. 
+
+The class in R seems to have no method included in it and just have some data fields inside (I am not sure). Could I difine a class like what I do in Java?
+
+Moreover, the main purpose of using class in R seems to be matching the generic function instead of OOD, isn't it?
+
+### Answer
+
+The basic class in R is very weak and can not include any method in its class. Use s4 or r6 could extend the system.
+
+<https://adv-r.hadley.nz/s4.html><https://adv-r.hadley.nz/r6.html>
+
+## About the graphics
+
+Some function would create a figure (plot, curve, symbols), but other would need to be added to an existed figure (points lines).
+
+Could I use the function that would create a figure to change a existing figure by some way?
+
+What is the most elegant way to create a bank canvas? I use the following function.
+
+```R
+plot(c(0, 1),
+     c(0, 1),
+     type = "n",
+     xlab = "",
+     ylab = "",
+     bty='n',
+     axes = F)
+```
+
+The figure saved in pdf format would have a better quality when zooming, but how can I embed it into another document?
+
+How could I reset all the par settings? I do this by restarting the current session.
+
+### Answer
+
+There is no way to change the bahavior of these function.
+
+That is the best way to create the canvas.
+
+Latex code `\includegraphics` could include pdfs as figures.
+
+`op <- par()` could save the original par setting and could use `par(op)` to recover it.
+
+`asp` is a good option to control the picture x/y percentage.
+
+## Can I use the code in the hint directly?
+
+## About the unpack
+
+Some function would need to have a parameter list, such as (paste). It could not deal with vector correctly, so we need to unpack the vector.
+
+```R
+paste(c('a','b'))
+```
+
+In python, we could do the following things.
+
+```python
+a=[1,2,3]
+some_function_need_parameter_list(*a)
+```
+
+Could I do similiar things in R?
+
+### Answer
+
+`do.call("paste", list("a", "b"))` could work around.
+
+## How could I index the string?
+
+If I want to get the i element, I could not do `some_sting[n]`. I could only use `substr` to do so.
+
+No. `substr` is the best way.
+
+## Could I index the element from reverse way
+
+I could do this by `some_list[-i]` in python.
+
+No.
+
+## Why I could not use as.vector to turn a list to a vector?
+
+I need to use unlist to do so.
+
+No. Poor design.
+
+## Could I have a vector with multiple vector inside?
+
+I did not find a way to do so.
+
+No.
 
 ## Best Practice of Changing string in data.frame to factor
 
@@ -276,70 +387,4 @@ Levels: fred harry joe
 
 Is there a better way to do this?
 
-## Understanding of the class in R
-
-I found that the class in R is different from the class in Java. 
-
-The class in R seems to have no method included in it and just have some data fields inside (I am not sure). Could I difine a class like what I do in Java?
-
-Moreover, the main purpose of using class in R seems to be matching the generic function instead of OOD, isn't it?
-
-## About the graphics
-
-Some function would create a figure (plot, curve, symbols), but other would need to be added to an existed figure (points lines).
-
-Could I use the function that would create a figure to change a existing figure by some way?
-
-What is the most elegant way to create a bank canvas? I use the following function.
-
-```R
-plot(c(0, 1),
-     c(0, 1),
-     type = "n",
-     xlab = "",
-     ylab = "",
-     bty='n',
-     axes = F)
-```
-
-The figure saved in pdf format would have a better quality when zooming, but how can I embed it into another document?
-
-How could I reset all the par settings? I do this by restarting the current session.
-
-## Can I use the code in the hint directly?
-
-## About the unpack
-
-Some function would need to have a parameter list, such as (paste). It could not deal with vector correctly, so we need to unpack the vector.
-
-```R
-paste(c('a','b'))
-```
-
-In python, we could do the following things.
-
-```python
-a=[1,2,3]
-some_function_need_parameter_list(*a)
-```
-
-Could I do similiar things in R?
-
-## How could I index the string?
-
-If I want to get the i element, I could not do `some_sting[n]`. I could only use substr to do so.
-
-## Could I index the element from reverse way
-
-I could do this by `some_list[-i]` in python.
-
-## Why I could not use as.vector to turn a list to a vector?
-
-I need to use unlist to do so.
-
-## Could I have a vector with multiple vector inside?
-
-I did not find a way to do so.
-
-
-
+## Is there reference or pointer in R?

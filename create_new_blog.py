@@ -6,7 +6,7 @@ time_short=time.strftime("%Y-%m-%d", time.localtime())
 time_long=time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 
 # change here
-blog_name_short='Question about R'
+blog_name_short='tar'
 
 blog_name=time_short+'-'+blog_name_short+'.markdown'
 

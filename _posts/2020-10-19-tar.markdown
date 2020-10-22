@@ -1,0 +1,27 @@
+---
+layout:     post
+title:      "tar"
+subtitle:   ""
+date:       2020-10-19 21:55:41
+author:     "gcrth"
+header-img: "img/post-bg-2015.jpg"
+catalog: true
+---
+
+Delete -v would speed up the process.
+
+## unpack
+
+```bash
+tar -xzvf TARGET.tar.gz
+tar -xzvf TARGET.tgz
+tar -xvf TARGET.tar
+```
+
+## pack
+
+```bash
+tar -czvf TARGET.tar.gz SOURCE ...
+tar -czvf TARGET.tgz SOURCE ...
+tar -cvf TARGET.tar SOURCE ...
+```
