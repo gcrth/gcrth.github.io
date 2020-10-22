@@ -388,3 +388,10 @@ Levels: fred harry joe
 Is there a better way to do this?
 
 ## Is there reference or pointer in R?
+
+## What is x in the following code.
+
+```R
+curve(x^2)
+```
+
