@@ -40,7 +40,9 @@ HAO ZHANG
 
 ### SKILLS
 
-* Computer skills (Proficient): C/C++, Python, PyTorch
+* Computer skills (Proficient): C/C++; Python; PyTorch;
+
+* Skills used in previous projects: R; Java; C#; SQL; Javascript; x86 Assembly;
 
 * Language skills: TOEFL: 106 (Reading: 30, Listening: 30, Speaking: 22, Writing: 24)
 GRE: 330 (Verbal: 162, Quantitative: 168)
