@@ -96,7 +96,7 @@ Supervisor: Xiaoqing Lyu `Intern`
 
 * Adopted Variational Autoencoders (VAEs) to operate directly on graph-structured data to generate molecular.
 * Designed an interpretable regularizer to encourage the generation of molecule with desired properties.
-* Compared with the method of generation of molecular such as: Graph based, SMILES based, and the method of generative recursive autoencoders for Shape Structures.
+<!-- * Compared with the method of generation of molecular such as: Graph based, SMILES based, and the method of generative recursive autoencoders for Shape Structures. -->
 * Tried to find a solution for model collapse and improve the diversity of generated molecules. 
 
 ![intro_picture](../../img/about/p1.jpg)
