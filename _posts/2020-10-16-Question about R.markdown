@@ -383,6 +383,8 @@ Levels: fred harry joe
 > # not work best practice?
 ```
 
+No better way.
+
 ### Question
 
 Is there a better way to do this?
@@ -395,3 +397,8 @@ Is there a better way to do this?
 curve(x^2)
 ```
 
+It is an expression. The `x` in that expression has special meaning.
+
+## Tips
+
+* If you expect the result in the `heatmap` to be shown symmetrically, you need to care about the `symm` option.
